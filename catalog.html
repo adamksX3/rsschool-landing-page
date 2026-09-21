@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог — BylyOne Coffee House</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">☕ BylyOne</a>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html#hero">Главная</a></li>
+        <li><a href="index.html#about">О нас</a></li>
+        <li><a href="index.html#menu">Меню</a></li>
+        <li><a href="index.html#reviews">Отзывы</a></li>
+        <li><a href="index.html#contacts">Контакты</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <button id="theme-btn">🌙</button>
+      <button class="burger">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Каталог</h1>
+
+    <nav class="categories">
+      <a href="#coffee" class="active">Кофе</a>
+      <a href="#tea">Чай</a>
+      <a href="#desserts">Десерты</a>
+    </nav>
+
+    <div class="container">
+      <div class="catalog-group" id="coffee">
+        <h2>Кофе</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/coffee-cappuccino.jpg" alt="Капучино в стеклянной чашке" />
+            <div class="card-body">
+              <h3>Капучино</h3>
+              <p>Воздушная пенка и щепотка корицы по желанию.</p>
+              <div class="params">
+                <span>250 мл</span>
+                <span>корица</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">7,50 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/coffee-latte-macchiato.jpg" alt="Латте маккиато с рисунком на пенке" />
+            <div class="card-body">
+              <h3>Латте маккиато</h3>
+              <p>Слоями — молоко, эспрессо и нежная пенка.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>молоко на выбор</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">8,20 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/coffee-ice-latte.jpg" alt="Айс латте слоями" />
+            <div class="card-body">
+              <h3>Айс латте</h3>
+              <p>Холодный кофе с молоком и льдом — слоями в стакане.</p>
+              <div class="params">
+                <span>350 мл</span>
+                <span>со льдом</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">8,50 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/coffee-coldbrew.jpg" alt="Колд брю со льдом" />
+            <div class="card-body">
+              <h3>Колд брю</h3>
+              <p>Кофе холодного заваривания, 12 часов настаивания.</p>
+              <div class="params">
+                <span>350 мл</span>
+                <span>без сахара</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">9,00 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/coffee-glace.jpg" alt="Кофе гляссе со взбитыми сливками" />
+            <div class="card-body">
+              <h3>Гляссе</h3>
+              <p>Холодный кофе со взбитыми сливками сверху.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>сливки</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">8,80 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-group" id="tea">
+        <h2>Чай и другие напитки</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/tea-mulled-wine.jpg" alt="Глинтвейн" />
+            <div class="card-body">
+              <h3>Глинтвейн</h3>
+              <p>Тёплый напиток с апельсином, корицей и бадьяном.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>безалкогольный</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">6,50 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/tea-black.jpg" alt="Медовый чай" />
+            <div class="card-body">
+              <h3>Черный</h3>
+              <p>Чёрный чай с натуральным мёдом, мягкий и согревающий.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>с мёдом</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">6,80 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/tea-citrus.jpg" alt="Лимонный чай" />
+            <div class="card-body">
+              <h3>Цитрусовый</h3>
+              <p>Чай с долькой лимона, свежий и бодрящий вкус.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>с лимоном</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">6,20 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/tea-spiced.jpg" alt="Пряный чай" />
+            <div class="card-body">
+              <h3>Пряный</h3>
+              <p>Чай с добавлением мяты и мелиссы.</p>
+              <div class="params">
+                <span>300 мл</span>
+                <span>с пряностями</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">6,50 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-group" id="desserts">
+        <h2>Десерты</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/dessert-pancakes.jpg" alt="Панкейки с ягодами и мёдом" />
+            <div class="card-body">
+              <h3>Панкейки</h3>
+              <p>Со свежими ягодами и мёдом, готовим на заказ.</p>
+              <div class="params">
+                <span>250 г</span>
+                <span>с ягодами</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">7,50 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/dessert-honey-cake.jpg" alt="Кусочек медовика" />
+            <div class="card-body">
+              <h3>Медовик</h3>
+              <p>Классический медовый торт собственной выпечки.</p>
+              <div class="params">
+                <span>150 г</span>
+                <span>классический</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">6,80 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/dessert-chocolate-cake.jpg" alt="Шоколадный торт с мятой и клубникой" />
+            <div class="card-body">
+              <h3>Шоколадный торт</h3>
+              <p>Плотный шоколадный бисквит с ягодным соусом.</p>
+              <div class="params">
+                <span>140 г</span>
+                <span>с ягодами</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">7,90 руб.</span>
+                <button class="btn btn-outline btn-small">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-col">
+        <a href="index.html" class="logo">☕ BylyOne</a>
+        <p>Кофейня со своей обжаркой и десертами собственной выпечки в центре города.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <a href="index.html#about">О нас</a>
+        <a href="index.html#menu">Меню</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#reviews">Отзывы</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Каталог</h4>
+        <a href="catalog.html#coffee">Кофе</a>
+        <a href="catalog.html#tea">Чай</a>
+        <a href="catalog.html#desserts">Десерты</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <p>г. Минск, ул. Кофейная, 12</p>
+        <a href="tel:+375291234567">+375 29 123-45-67</a>
+        <a href="mailto:hello@bylyone.coffee">hello@bylyone.coffee</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BylyOne Coffee House. Учебный проект RS School</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
