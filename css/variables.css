@@ -1,0 +1,21 @@
+:root {
+  --color-brand: #a9713f;
+  --color-bg: #fbf7f2;
+  --color-bg-secondary: #f2e9dd;
+  --color-surface: #ffffff;
+  --color-text: #2b1f16;
+  --color-text-muted: #6b5c4d;
+  --color-border: #e5d9c8;
+
+  --font-main: "Nunito Sans", Arial, sans-serif;
+  --font-accent: "Playfair Display", Georgia, serif;
+}
+
+body.dark-theme {
+  --color-bg: #1c1712;
+  --color-bg-secondary: #241d16;
+  --color-surface: #2a2119;
+  --color-text: #f5ece0;
+  --color-text-muted: #bfae9b;
+  --color-border: #3c3025;
+}
