@@ -438,6 +438,8 @@ ul {
   margin-bottom: 15px;
 }
 
+/* adaptive */
+
 @media (max-width: 900px) {
   .hero .container,
   .about .container,

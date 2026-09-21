@@ -1,6 +1,6 @@
 'use strict';
 
-const themeBtn = document.getElementById('theme-btn');
+eBtn = document.getElementById('theme-btn');
 
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark-theme');
