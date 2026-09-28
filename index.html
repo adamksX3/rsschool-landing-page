@@ -153,31 +153,50 @@
       <div class="container">
         <h2 class="section-title">Что говорят гости</h2>
 
-        <div class="review-list">
-          <div class="review">
-            <div class="review-head">
-              <b>Анна К.</b>
-              <div>⭐⭐⭐⭐⭐</div>
+        <div class="slider">
+          <button class="slider-btn" id="slider-prev" aria-label="Предыдущий отзыв">‹</button>
+          <div class="slider-window">
+            <div class="slider-track" id="slider-track">
+              <div class="review slide">
+                <div class="review-head">
+                  <b>Анна К.</b>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <p>Хожу сюда работать по утрам — латте вкусный, и место спокойное.</p>
+              </div>
+              <div class="review slide">
+                <div class="review-head">
+                  <b>Максим П.</b>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <p>Обжарка чувствуется во вкусе, никакой горечи. Медовик тоже советую.</p>
+              </div>
+              <div class="review slide">
+                <div class="review-head">
+                  <b>Елена С.</b>
+                  <div>⭐⭐⭐⭐</div>
+                </div>
+                <p>Уютное место для встреч с подругами. Хотелось бы больше сидячих мест вечером.</p>
+              </div>
+              <div class="review slide">
+                <div class="review-head">
+                  <b>Дмитрий Л.</b>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <p>Беру айс латте каждый день по дороге на работу. Готовят быстро и всегда одинаково вкусно.</p>
+              </div>
+              <div class="review slide">
+                <div class="review-head">
+                  <b>Ольга Р.</b>
+                  <div>⭐⭐⭐⭐⭐</div>
+                </div>
+                <p>Панкейки с ягодами — лучшие в городе. И приятно, что дают скидку за свой стакан.</p>
+              </div>
             </div>
-            <p>Хожу сюда работать по утрам — латте вкусный, и место спокойное.</p>
           </div>
-
-          <div class="review">
-            <div class="review-head">
-              <b>Максим П.</b>
-              <div>⭐⭐⭐⭐⭐</div>
-            </div>
-            <p>Обжарка чувствуется во вкусе, никакой горечи. Медовик тоже советую.</p>
-          </div>
-
-          <div class="review">
-            <div class="review-head">
-              <b>Елена С.</b>
-              <div>⭐⭐⭐⭐</div>
-            </div>
-            <p>Уютное место для встреч с подругами. Хотелось бы больше сидячих мест вечером.</p>
-          </div>
+          <button class="slider-btn" id="slider-next" aria-label="Следующий отзыв">›</button>
         </div>
+        <div class="slider-dots" id="slider-dots"></div>
       </div>
     </section>
 
@@ -258,5 +277,7 @@
   </footer>
 
   <script src="js/theme.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>

@@ -312,10 +312,65 @@ ul {
   padding: 50px 0;
 }
 
-.review-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.slider-window {
+  flex: 1;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slider-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--color-brand);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-brand);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slider-btn:hover {
+  background-color: var(--color-brand);
+  color: #fff;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: var(--color-brand);
 }
 
 .review {
@@ -326,6 +381,7 @@ ul {
 
 .review-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
@@ -438,7 +494,143 @@ ul {
   margin-bottom: 15px;
 }
 
-/* adaptive */
+.card-hidden {
+  display: none;
+}
+
+.load-more {
+  text-align: center;
+  margin: 30px 0 50px;
+}
+
+.catalog-cards .card {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 16px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.modal-img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.modal-info {
+  flex: 1;
+}
+
+.modal-title {
+  font-family: var(--font-accent);
+  font-size: 26px;
+  margin: 10px 40px 10px 0;
+}
+
+.modal-description {
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.modal-options {
+  margin-bottom: 18px;
+}
+
+.modal-options-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option {
+  padding: 8px 14px;
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.option.active {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+}
+
+.modal-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  border-top: 1px solid var(--color-border);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+  }
+
+  .modal-img {
+    width: 100%;
+    max-height: 220px;
+  }
+}
 
 @media (max-width: 900px) {
   .hero .container,
@@ -446,13 +638,42 @@ ul {
   .contacts .container {
     flex-direction: column;
   }
+}
 
-  .nav-list {
-    display: none;
-  }
+body.no-scroll {
+  overflow: hidden;
+}
 
+@media (max-width: 768px) {
   .burger {
     display: block;
+    position: relative;
+    z-index: 20;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 260px;
+    height: 100vh;
+    padding: 90px 30px 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
+    background-color: var(--color-surface);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-list.open {
+    transform: translateX(0);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-list a {
+    font-size: 18px;
   }
 }
 
