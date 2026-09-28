@@ -9,7 +9,7 @@ function formatPrice(price) {
 function createCard(product) {
   const card = document.createElement('div');
   card.className = 'card';
-  card.dataset.id = product.id; // получится <div class="card" data-id="1">
+  card.dataset.id = product.id;
 
   card.innerHTML = `
     <img src="${product.image}" alt="${product.alt}" />
@@ -41,3 +41,19 @@ function renderCards(category) {
 }
 
 renderCards('coffee');
+
+const categoryLinks = document.querySelectorAll('.categories a');
+
+for (let i = 0; i < categoryLinks.length; i++) {
+  categoryLinks[i].addEventListener('click', function (event) {
+    event.preventDefault();
+
+    for (let j = 0; j < categoryLinks.length; j++) {
+      categoryLinks[j].classList.remove('active');
+    }
+    this.classList.add('active');
+
+    const category = this.dataset.category;
+    renderCards(category);
+  });
+}
