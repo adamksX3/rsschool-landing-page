@@ -446,8 +446,6 @@ ul {
   }
 }
 
-/*part 2*/
-
 body.no-scroll {
   overflow: hidden;
 }
