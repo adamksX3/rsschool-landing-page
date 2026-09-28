@@ -438,6 +438,15 @@ ul {
   margin-bottom: 15px;
 }
 
+.card-hidden {
+  display: none;
+}
+
+.load-more {
+  text-align: center;
+  margin: 30px 0 50px;
+}
+
 @media (max-width: 900px) {
   .hero .container,
   .about .container,

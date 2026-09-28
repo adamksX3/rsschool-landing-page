@@ -1,6 +1,9 @@
 'use strict';
 
 const cardsContainer = document.getElementById('catalog-cards');
+const loadMoreBtn = document.getElementById('load-more-btn');
+
+let showAll = false;
 
 function formatPrice(price) {
   return price.toFixed(2).replace('.', ',') + ' руб.';
@@ -38,6 +41,29 @@ function renderCards(category) {
       cardsContainer.appendChild(card);
     }
   }
+
+  showAll = false;
+  updateCards();
+}
+
+function updateCards() {
+  const cards = cardsContainer.querySelectorAll('.card');
+  let hiddenCount = 0;
+
+  for (let i = 0; i < cards.length; i++) {
+    if (!showAll && window.innerWidth <= 768 && i >= 4) {
+      cards[i].classList.add('card-hidden');
+      hiddenCount++;
+    } else {
+      cards[i].classList.remove('card-hidden');
+    }
+  }
+
+  if (hiddenCount > 0) {
+    loadMoreBtn.style.display = '';
+  } else {
+    loadMoreBtn.style.display = 'none';
+  }
 }
 
 renderCards('coffee');
@@ -57,3 +83,12 @@ for (let i = 0; i < categoryLinks.length; i++) {
     renderCards(category);
   });
 }
+
+loadMoreBtn.addEventListener('click', function () {
+  showAll = true;
+  updateCards();
+});
+
+window.addEventListener('resize', function () {
+  updateCards();
+});
