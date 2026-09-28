@@ -9,7 +9,7 @@ function formatPrice(price) {
 function createCard(product) {
   const card = document.createElement('div');
   card.className = 'card';
-  card.dataset.id = product.id;
+  card.dataset.id = product.id; // получится <div class="card" data-id="1">
 
   card.innerHTML = `
     <img src="${product.image}" alt="${product.alt}" />
