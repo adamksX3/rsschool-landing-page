@@ -522,6 +522,39 @@ ul {
   margin-bottom: 20px;
 }
 
+.modal-options {
+  margin-bottom: 18px;
+}
+
+.modal-options-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option {
+  padding: 8px 14px;
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.option.active {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+}
+
 .modal-total {
   display: flex;
   align-items: center;
