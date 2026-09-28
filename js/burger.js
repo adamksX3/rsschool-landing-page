@@ -11,6 +11,10 @@ function openMenu() {
 }
 
 function closeMenu() {
+  if (!navList.classList.contains('open')) {
+    return;
+  }
+
   navList.classList.remove('open');
   document.body.classList.remove('no-scroll');
   burgerBtn.textContent = '☰';
