@@ -1,0 +1,208 @@
+'use strict';
+
+const coffeeSizes = [
+  { name: '250 мл', add: 0 },
+  { name: '350 мл', add: 1 },
+  { name: '450 мл', add: 2 },
+];
+
+const coffeeAdditives = [
+  { name: 'Сахар', add: 0.3 },
+  { name: 'Корица', add: 0.5 },
+  { name: 'Сироп', add: 0.8 },
+];
+
+const teaSizes = [
+  { name: '300 мл', add: 0 },
+  { name: '400 мл', add: 0.8 },
+  { name: '500 мл', add: 1.5 },
+];
+
+const teaAdditives = [
+  { name: 'Мёд', add: 0.5 },
+  { name: 'Лимон', add: 0.3 },
+  { name: 'Имбирь', add: 0.5 },
+];
+
+const dessertSizes = [
+  { name: '1 кусочек', add: 0 },
+  { name: '2 кусочка', add: 6 },
+  { name: '3 кусочка', add: 12 },
+];
+
+const dessertAdditives = [
+  { name: 'Сливки', add: 0.8 },
+  { name: 'Ягоды', add: 1 },
+  { name: 'Шоколадный соус', add: 0.7 },
+];
+
+const products = [
+
+  {
+    id: 1,
+    category: 'coffee',
+    name: 'Карамельный маккиато',
+    description: 'Эспрессо с молочной пенкой и карамелью, топим сахар сверху.',
+    image: 'images/coffee-caramel-macchiato.jpg',
+    alt: 'Карамельный маккиато с карамелизированной пенкой',
+    price: 7.5,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 2,
+    category: 'coffee',
+    name: 'Латте',
+    description: 'Нежное молоко и эспрессо, мягкий сбалансированный вкус.',
+    image: 'images/coffee-latte.jpg',
+    alt: 'Латте в высокой кружке',
+    price: 8.2,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 3,
+    category: 'coffee',
+    name: 'Айриш кофе',
+    description: 'Кофе со сливками, подаём в кружке с печеньем.',
+    image: 'images/coffee-irish.jpg',
+    alt: 'Айриш кофе в стеклянной кружке',
+    price: 8.5,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 4,
+    category: 'coffee',
+    name: 'Айс латте',
+    description: 'Холодный кофе с молоком и льдом — слоями в стакане.',
+    image: 'images/coffee-iced-latte.jpg',
+    alt: 'Айс латте слоями в высоком стакане',
+    price: 9,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 5,
+    category: 'coffee',
+    name: 'Эспрессо маккиато',
+    description: 'Крепкий эспрессо с ложкой молочной пенки.',
+    image: 'images/coffee-espresso-macchiato.jpg',
+    alt: 'Эспрессо маккиато в маленькой чашке',
+    price: 6.5,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 6,
+    category: 'coffee',
+    name: 'Ванильный латте',
+    description: 'Латте с ванильным сиропом, мягкий и ароматный.',
+    image: 'images/coffee-vanilla-latte.jpg',
+    alt: 'Ванильный латте в высоком бокале',
+    price: 8,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 7,
+    category: 'coffee',
+    name: 'Кофе с молоком',
+    description: 'Классический эспрессо с тёплым молоком, без изысков.',
+    image: 'images/coffee-milk.jpg',
+    alt: 'Кофе с молоком в стеклянной кружке',
+    price: 6.8,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+  {
+    id: 8,
+    category: 'coffee',
+    name: 'Мокко',
+    description: 'Эспрессо с шоколадом и молоком, слоями в высоком стакане.',
+    image: 'images/coffee-mocha.jpg',
+    alt: 'Мокко со сливками и кофейными зёрнами',
+    price: 8.6,
+    sizes: coffeeSizes,
+    additives: coffeeAdditives,
+  },
+
+  {
+    id: 9,
+    category: 'tea',
+    name: 'Глинтвейн',
+    description: 'Тёплый напиток с апельсином, корицей и бадьяном.',
+    image: 'images/tea-spiced.jpg',
+    alt: 'Глинтвейн',
+    price: 6.5,
+    sizes: teaSizes,
+    additives: teaAdditives,
+  },
+  {
+    id: 10,
+    category: 'tea',
+    name: 'Медовый чай',
+    description: 'Чёрный чай с натуральным мёдом, мягкий и согревающий.',
+    image: 'images/tea-mulled-wine.jpg',
+    alt: 'Медовый чай',
+    price: 6.8,
+    sizes: teaSizes,
+    additives: teaAdditives,
+  },
+  {
+    id: 11,
+    category: 'tea',
+    name: 'Лимонный',
+    description: 'Чай с долькой лимона, свежий и бодрящий вкус.',
+    image: 'images/tea-citrus.jpg',
+    alt: 'Лимонный чай',
+    price: 6.2,
+    sizes: teaSizes,
+    additives: teaAdditives,
+  },
+  {
+    id: 12,
+    category: 'tea',
+    name: 'Пряный',
+    description: 'Чёрный чай с пряностями и апельсином, подаём тёплым.',
+    image: 'images/tea-black.jpg',
+    alt: 'Пряный чай',
+    price: 6.5,
+    sizes: teaSizes,
+    additives: teaAdditives,
+  },
+
+  {
+    id: 13,
+    category: 'desserts',
+    name: 'Панкейки',
+    description: 'Со свежими ягодами и мёдом, готовим на заказ.',
+    image: 'images/dessert-pancakes.jpg',
+    alt: 'Панкейки с ягодами и мёдом',
+    price: 7.5,
+    sizes: dessertSizes,
+    additives: dessertAdditives,
+  },
+  {
+    id: 14,
+    category: 'desserts',
+    name: 'Медовик',
+    description: 'Классический медовый торт собственной выпечки.',
+    image: 'images/dessert-honey-cake.jpg',
+    alt: 'Кусочек медовика',
+    price: 6.8,
+    sizes: dessertSizes,
+    additives: dessertAdditives,
+  },
+  {
+    id: 15,
+    category: 'desserts',
+    name: 'Шоколадный торт',
+    description: 'Плотный шоколадный бисквит с ягодным соусом.',
+    image: 'images/dessert-chocolate-cake.jpg',
+    alt: 'Шоколадный торт с мятой и клубникой',
+    price: 7.9,
+    sizes: dessertSizes,
+    additives: dessertAdditives,
+  },
+];
